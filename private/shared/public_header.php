@@ -17,13 +17,14 @@
       </h1>
     </header>
 
-    <p>Welcome to the Southern Appalachian Bird site.</p>
+    <p>Welcome to the Southern Appalachian Bird site <?php echo $session->username ?></p>
   
     <navigation>
 
         <?php 
         if($session->is_logged_in()) {
-        echo "<a href='logout.php'>Logout</a>";
+        echo "<a href='logout.php'>Logout</a></br>";
+        echo "<a href='users/index.php'>Users</a>";
         } else {
           echo "<a href='login.php'>Login</a>";
         }
